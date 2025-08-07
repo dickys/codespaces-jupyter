@@ -1,0 +1,10 @@
+# %%
+pip install pytesseract, Pillow
+
+import pytesseract
+from PIL import Image
+
+# Ganti nama file di bawah ini sesuai file JPG yang ingin di-OCR
+image = Image.open('BCJun2025TelkomAksesJul25 (1).jpg')
+text = pytesseract.image_to_string(image, lang='ind')
+print(text)
